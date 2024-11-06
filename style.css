@@ -1,0 +1,125 @@
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0e5ff;
+    margin: 0;
+}
+
+/* Card styling */
+.card {
+    text-align: center;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    position: relative;
+}
+
+/* Title and message */
+h1 {
+    font-size: 2.5em;
+    color: #ff6f91;
+}
+
+.message {
+    font-size: 1.4em;
+    margin: 15px 0 25px;
+    color: #333;
+}
+
+/* Photo gallery styling */
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.photo-gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.photo-gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Balloon animations */
+.balloons {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -50px;
+    width: 50px;
+    height: 80px;
+    background-color: #ff6f91;
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+#balloon1 {
+    left: 20%;
+    animation-delay: 0s;
+}
+
+#balloon2 {
+    left: 50%;
+    background-color: #ffcc5c;
+    animation-delay: 2s;
+}
+
+#balloon3 {
+    left: 80%;
+    background-color: #88d8b0;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-250px);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+}
+
+/* Audio container */
+.audio-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Music control */
+audio {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    background-color: #ff6f91;
+}
