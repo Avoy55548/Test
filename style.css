@@ -126,8 +126,8 @@ audio {
 
 /* Media queries for responsive design */
 
-/* Mobile devices */
-@media (max-width: 600px) {
+/* Mobile devices (less than 600px) */
+@media (max-width: 599px) {
     .card {
         padding: 20px;
         max-width: 90%;
@@ -152,8 +152,8 @@ audio {
     }
 }
 
-/* Tablet devices */
-@media (max-width: 900px) {
+/* Small tablets (600px to 899px) */
+@media (min-width: 600px) and (max-width: 899px) {
     .card {
         padding: 30px;
         max-width: 80%;
@@ -178,7 +178,33 @@ audio {
     }
 }
 
-/* Desktop devices */
+/* Tablets and small desktops (900px to 1199px) */
+@media (min-width: 900px) and (max-width: 1199px) {
+    .card {
+        padding: 40px;
+        max-width: 70%;
+    }
+
+    h1 {
+        font-size: 2.4em;
+    }
+
+    .message {
+        font-size: 1.4em;
+    }
+
+    .photo-gallery img {
+        width: 140px;
+        height: 140px;
+    }
+
+    audio {
+        width: 80%;
+        max-width: 380px;
+    }
+}
+
+/* Large desktops (1200px and above) */
 @media (min-width: 1200px) {
     .card {
         padding: 50px;
