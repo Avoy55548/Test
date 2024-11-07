@@ -3,10 +3,15 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    /* Align content to the top */
+    padding-top: 20px;
+    /* Top padding */
     height: 100vh;
     background-color: #f0e5ff;
     margin: 0;
+    overflow-y: auto;
+    /* Allows scrolling if needed */
 }
 
 /* Card styling */
@@ -19,6 +24,8 @@ body {
     max-width: 600px;
     position: relative;
     overflow: hidden;
+    margin-top: 20px;
+    /* Extra margin at the top of the card */
 }
 
 /* Title and message */
@@ -27,7 +34,6 @@ h1 {
     color: #ff6f91;
     margin: 0;
     padding: 0;
-    max-width: 100%;
     word-wrap: break-word;
 }
 
@@ -128,83 +134,101 @@ audio {
     background-color: #ff6f91;
 }
 
-/* Media Queries */
-
 /* Responsive Styles for Smaller Screens */
 @media (max-width: 768px) {
 
+    /* Adjust card layout */
+    .card {
+        padding: 25px;
+        max-width: 90%;
+    }
+
     /* Adjust header size */
     h1 {
-        font-size: 2em;
+        font-size: 2.2em;
     }
 
     /* Adjust message font size */
     .message {
-        font-size: 1.1em;
-        padding: 10px;
+        font-size: 1.3em;
     }
 
     /* Adjust photo gallery image size */
     .photo-gallery img {
-        width: 100px;
-        height: 100px;
+        width: 130px;
+        height: 130px;
     }
 
-    /* Adjust balloon animation position and scale */
-    .balloons {
-        height: 150px;
-    }
-
+    /* Adjust balloon size */
     .balloon {
         width: 40px;
-        height: 65px;
+        height: 60px;
     }
 
-    /* Adjust audio controls width */
-    .audio-container audio {
+    /* Adjust audio control size */
+    audio {
         width: 85%;
-        max-width: 300px;
     }
+}
 
-    /* General card padding adjustment */
+/* Responsive Styles for 375 x 667 devices (e.g., iPhone SE 2nd Gen) */
+@media (max-width: 375px) and (max-height: 667px) {
     .card {
         padding: 20px;
         max-width: 90%;
     }
-}
 
-/* Responsive Styles for Extra Small Screens (e.g., iPhone SE 1st Gen, 320px wide) */
-@media (max-width: 320px) {
-
-    /* Adjust header size */
     h1 {
-        font-size: 1.6em;
+        font-size: 2em;
     }
 
-    /* Adjust message font size */
     .message {
-        font-size: 0.9em;
+        font-size: 1.1em;
     }
 
-    /* Adjust photo gallery image size */
     .photo-gallery img {
-        width: 90px;
-        height: 90px;
+        width: 120px;
+        height: 120px;
     }
 
-    /* Adjust balloon size */
     .balloon {
         width: 35px;
         height: 55px;
     }
 
-    /* Adjust audio controls width */
-    .audio-container audio {
+    audio {
         width: 90%;
     }
+}
 
-    /* Adjust card padding */
+/* Responsive Styles for 320px screens (e.g., iPhone SE 1st Gen) */
+@media (max-width: 320px) and (max-height: 568px) {
     .card {
         padding: 15px;
+        max-width: 90%;
+        margin-top: 30px;
+        /* Extra margin on top */
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .message {
+        font-size: 1em;
+    }
+
+    .photo-gallery img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .balloon {
+        width: 30px;
+        height: 50px;
+    }
+
+    audio {
+        width: 90%;
     }
 }
